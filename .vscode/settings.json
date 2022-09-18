@@ -20,9 +20,9 @@
         "yarn.lock": true,
         "package-lock.json": true,
         ".prettierignore": true,
-        ".gitignore": true,
+        // ".gitignore": true,
         ".git": true,
-        "dist": true,
+        // "dist": true,
         "coverage": true,
         ".vscode": true,
 
