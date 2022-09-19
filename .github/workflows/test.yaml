@@ -25,5 +25,8 @@ jobs:
       - name: Run action
         uses: ./
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: ${{ github.repository }}
+          from: v0.0.1
+          to: v0.0.2
           
