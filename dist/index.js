@@ -9528,6 +9528,42 @@ exports.inputs = inputs;
 
 /***/ }),
 
+/***/ 8891:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core_1 = __nccwpck_require__(5681);
+const github_1 = __nccwpck_require__(1340);
+const input_1 = __nccwpck_require__(2322);
+const opts = (0, input_1.inputs)();
+const octokit = (0, github_1.getOctokit)(opts.token);
+(0, core_1.info)('Getting commits');
+getCommits();
+function getCommits() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const commits = yield octokit.paginate(octokit.rest.repos.listCommits, {
+            owner: opts.repo.owner,
+            repo: opts.repo.name,
+            per_page: 100,
+        });
+        console.log(commits);
+    });
+}
+
+
+/***/ }),
+
 /***/ 2628:
 /***/ ((module) => {
 
@@ -9702,21 +9738,12 @@ module.exports = JSON.parse('[[[0,44],"disallowed_STD3_valid"],[[45,46],"valid"]
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-var exports = __webpack_exports__;
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const github_1 = __nccwpck_require__(1340);
-const input_1 = __nccwpck_require__(2322);
-const opts = (0, input_1.inputs)();
-const octokit = (0, github_1.getOctokit)(opts.token);
-console.log(opts);
-
-})();
-
-module.exports = __webpack_exports__;
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __nccwpck_require__(8891);
+/******/ 	module.exports = __webpack_exports__;
+/******/ 	
 /******/ })()
 ;
