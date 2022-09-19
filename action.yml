@@ -1,7 +1,35 @@
 name: 'action-release'
 author: 'Lucas Colombo'
-description: 'Release a new version of a @lucas-labs package'
-
+description: 'Create a release changelog based on commits'
+inputs:
+  token:
+    description: 'GitHub token'
+    required: true
+  repo:
+    description: 'Repository to release'
+    required: true
+  from:
+    description: 'From tag'
+    required: true
+  to:
+    description: 'To tag'
+    required: true
+  include-body:
+    description: 'Include body'
+    required: false
+    default: 'true'
+  include-hash:
+    description: 'Include hash'
+    required: false
+    default: 'true'
+  include-author:
+    description: 'Include author'
+    required: false
+    default: 'true'
+  include-pr:
+    description: 'Include PR'
+    required: false
+    default: 'true'
 runs:
   using: 'node16'
   main: 'dist/index.js'

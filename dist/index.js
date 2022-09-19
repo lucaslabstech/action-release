@@ -9487,6 +9487,47 @@ function wrappy (fn, cb) {
 
 /***/ }),
 
+/***/ 2322:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.inputs = void 0;
+const core_1 = __nccwpck_require__(5681);
+function inputs() {
+    var _a, _b, _c, _d, _e;
+    const token = (0, core_1.getInput)('token', { required: true });
+    const [owner, name] = (_a = (0, core_1.getInput)('repo', { required: true })) === null || _a === void 0 ? void 0 : _a.split('/');
+    const from = (0, core_1.getInput)('from', { required: true });
+    const to = (0, core_1.getInput)('to', { required: true });
+    const includeBody = ((_b = (0, core_1.getInput)('include-body', { required: false })) === null || _b === void 0 ? void 0 : _b.toLowerCase()) === 'true';
+    const includeHash = ((_c = (0, core_1.getInput)('include-hash', { required: false })) === null || _c === void 0 ? void 0 : _c.toLowerCase()) === 'true';
+    const includeAuthor = ((_d = (0, core_1.getInput)('include-author', { required: false })) === null || _d === void 0 ? void 0 : _d.toLowerCase()) === 'true';
+    const includePr = ((_e = (0, core_1.getInput)('include-pr', { required: false })) === null || _e === void 0 ? void 0 : _e.toLowerCase()) === 'true';
+    return {
+        token,
+        repo: {
+            owner,
+            name,
+        },
+        opts: {
+            from,
+            to,
+            include: {
+                body: includeBody,
+                hash: includeHash,
+                author: includeAuthor,
+                pr: includePr,
+            }
+        }
+    };
+}
+exports.inputs = inputs;
+
+
+/***/ }),
+
 /***/ 2628:
 /***/ ((module) => {
 
@@ -9668,11 +9709,11 @@ var __webpack_exports__ = {};
 var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const core_1 = __nccwpck_require__(5681);
 const github_1 = __nccwpck_require__(1340);
-const token = (0, core_1.getInput)('token', { required: true });
-const octokit = (0, github_1.getOctokit)(token);
-console.log('Initial setup');
+const input_1 = __nccwpck_require__(2322);
+const opts = (0, input_1.inputs)();
+const octokit = (0, github_1.getOctokit)(opts.token);
+console.log(opts);
 
 })();
 

@@ -1,0 +1,29 @@
+name: Test
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  run-action:
+    name: Run action
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Run action
+        uses: ./
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          

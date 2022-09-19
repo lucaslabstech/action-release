@@ -1,7 +1,7 @@
-import { getInput } from '@actions/core';
 import { getOctokit } from '@actions/github';
+import { inputs } from './core/input';
 
-const token = getInput('token', { required: true });
-const octokit = getOctokit(token);
+const opts = inputs();
+const octokit = getOctokit(opts.token);
 
-console.log('Initial setup');
+console.log(opts)
