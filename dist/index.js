@@ -9635,16 +9635,18 @@ class ChangelogGenerator {
     setCommits() {
         var _a;
         logger_1.Logger.log('    cg: Setting commits');
+        console.log(this.comparison);
         if ((_a = this.comparison) === null || _a === void 0 ? void 0 : _a.commits) {
             this.commits = (0, conv_commit_1.transformCommits)(this.comparison);
             this.groupedCommits = (0, conv_commit_1.groupCommitsByType)(this.commits);
-            logger_1.Logger.log(this.commits);
-            logger_1.Logger.log(this.groupedCommits);
+            console.log('commits', this.commits);
+            console.log('groupedCommits', this.groupedCommits);
         }
     }
     /** get markdown changelog */
     get md() {
         logger_1.Logger.log('    cg: Generating markdown changelog');
+        console.log('groupedCommits', this.groupedCommits);
         if (!this.groupedCommits)
             return '';
         return (0, md_1.toMd)(this.groupedCommits, `https://github.com/${this.owner}/${this.repo}/compare/${this.input.opts.from}...${this.input.opts.nextVersion}`);
