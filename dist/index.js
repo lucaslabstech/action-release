@@ -9634,19 +9634,14 @@ class ChangelogGenerator {
     }
     setCommits() {
         var _a;
-        logger_1.Logger.log('    cg: Setting commits');
-        console.log(this.comparison);
         if ((_a = this.comparison) === null || _a === void 0 ? void 0 : _a.commits) {
             this.commits = (0, conv_commit_1.transformCommits)(this.comparison);
             this.groupedCommits = (0, conv_commit_1.groupCommitsByType)(this.commits);
-            console.log('commits', this.commits);
-            console.log('groupedCommits', this.groupedCommits);
         }
     }
     /** get markdown changelog */
     get md() {
-        logger_1.Logger.log('    cg: Generating markdown changelog');
-        console.log('groupedCommits', this.groupedCommits);
+        logger_1.Logger.debug('    cg: Generating markdown changelog');
         if (!this.groupedCommits)
             return '';
         return (0, md_1.toMd)(this.groupedCommits, `https://github.com/${this.owner}/${this.repo}/compare/${this.input.opts.from}...${this.input.opts.nextVersion}`);
@@ -9795,6 +9790,7 @@ function toMd(groups, full, includes = {
     hash: true,
     pr: true,
 }) {
+    logger_1.Logger.debug('md: Generating markdown changelog');
     const title = `## What's Changed\n\n`;
     const footer = full ? `**Full Changelog**: ${full}` : '';
     let sections = '';
@@ -9804,8 +9800,6 @@ function toMd(groups, full, includes = {
         }
     });
     const md = `${title}${sections}${footer}`;
-    logger_1.Logger.log('        md: Generated markdown changelog');
-    logger_1.Logger.log(md);
     return md;
 }
 exports.toMd = toMd;
