@@ -48,18 +48,20 @@ export class ChangelogGenerator {
 
     private setCommits() {
         Logger.log('    cg: Setting commits');
+        console.log(this.comparison);
         if (this.comparison?.commits) {
             this.commits = transformCommits(this.comparison);
             this.groupedCommits = groupCommitsByType(this.commits);
 
-            Logger.log(this.commits);
-            Logger.log(this.groupedCommits);
+            console.log('commits', this.commits);
+            console.log('groupedCommits', this.groupedCommits);
         }
     }
 
     /** get markdown changelog */
     public get md(): string {
         Logger.log('    cg: Generating markdown changelog');
+        console.log('groupedCommits', this.groupedCommits);
         if (!this.groupedCommits) return '';
         return toMd(
             this.groupedCommits,
