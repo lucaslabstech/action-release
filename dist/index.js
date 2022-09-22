@@ -9615,8 +9615,6 @@ class ChangelogGenerator {
     }
     static construct(options) {
         return __awaiter(this, void 0, void 0, function* () {
-            logger_1.Logger.info(`Creating changelog generator`);
-            console.log(options);
             const changelog = new ChangelogGenerator(options);
             yield changelog.compareBaseHead();
             changelog.setCommits();
@@ -9855,7 +9853,7 @@ function generateChangelog() {
         const md = gen.md;
         logger_1.Logger.log('📝 Changelog generated');
         logger_1.Logger.log(md);
-        (0, core_1.setOutput)('changelogs', md);
+        (0, core_1.setOutput)('changelog', md);
         logger_1.Logger.log('Done');
     });
 }
