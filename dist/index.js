@@ -9606,12 +9606,10 @@ const conv_commit_1 = __nccwpck_require__(155);
 const md_1 = __nccwpck_require__(2916);
 class ChangelogGenerator {
     constructor(input) {
-        var _a;
         this.input = input;
         this.octokit = (0, github_1.getOctokit)(input.token);
         this.owner = github_1.context.repo.owner;
         this.repo = github_1.context.repo.repo;
-        logger_1.Logger.debug((_a = github_1.context.payload.repository) === null || _a === void 0 ? void 0 : _a.asd);
     }
     static construct(options) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -9636,13 +9634,17 @@ class ChangelogGenerator {
     }
     setCommits() {
         var _a;
+        logger_1.Logger.log('    cg: Setting commits');
         if ((_a = this.comparison) === null || _a === void 0 ? void 0 : _a.commits) {
             this.commits = (0, conv_commit_1.transformCommits)(this.comparison);
             this.groupedCommits = (0, conv_commit_1.groupCommitsByType)(this.commits);
+            logger_1.Logger.log(this.commits);
+            logger_1.Logger.log(this.groupedCommits);
         }
     }
     /** get markdown changelog */
     get md() {
+        logger_1.Logger.log('    cg: Generating markdown changelog');
         if (!this.groupedCommits)
             return '';
         return (0, md_1.toMd)(this.groupedCommits, `https://github.com/${this.owner}/${this.repo}/compare/${this.input.opts.from}...${this.input.opts.nextVersion}`);
@@ -9777,12 +9779,13 @@ exports.inputs = inputs;
 /***/ }),
 
 /***/ 2916:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.itemMd = exports.sectionMd = exports.toMd = void 0;
+const logger_1 = __nccwpck_require__(1235);
 /** Generates a markdown changelog from a list of commits. */
 function toMd(groups, full, includes = {
     author: true,
@@ -9798,7 +9801,10 @@ function toMd(groups, full, includes = {
             sections += sectionMd(title, commits, includes);
         }
     });
-    return `${title}${sections}${footer}`;
+    const md = `${title}${sections}${footer}`;
+    logger_1.Logger.log('        md: Generated markdown changelog');
+    logger_1.Logger.log(md);
+    return md;
 }
 exports.toMd = toMd;
 function sectionMd(title, commits, includes) {
