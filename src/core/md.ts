@@ -13,6 +13,7 @@ export function toMd(
         pr: true,
     }
 ): string {
+    Logger.debug('md: Generating markdown changelog');
     const title = `## What's Changed\n\n`;
     const footer = full ? `**Full Changelog**: ${full}` : '';
     let sections = '';
@@ -24,9 +25,6 @@ export function toMd(
     });
 
     const md = `${title}${sections}${footer}`;
-
-    Logger.log('        md: Generated markdown changelog');
-    Logger.log(md);
 
     return md;
 }
