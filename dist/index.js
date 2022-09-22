@@ -9487,6 +9487,262 @@ function wrappy (fn, cb) {
 
 /***/ }),
 
+/***/ 1460:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ConventionalCommitTypes = exports.FALLBACK_TYPE = void 0;
+/** FALLBACK for non conventional commit */
+exports.FALLBACK_TYPE = 'other';
+/** Tipos de commit disponibles */
+exports.ConventionalCommitTypes = [
+    { title: '💡 New features', aliases: ['feature', 'feat'] },
+    { title: '🚑 Bug fixes', aliases: ['fix', 'bugfix', 'bug'] },
+    { title: '📚 Documentation', aliases: ['docs'] },
+    { title: '🔨 Code refactoring', aliases: ['refactor', 'refact'] },
+    { title: '🐎 Performance improvements', aliases: ['perf'] },
+    { title: '🧪 Tests', aliases: ['test'] },
+    { title: '🏗️ Build system changes', aliases: ['build'] },
+    { title: '🔄 Continuous Integration', aliases: ['ci', 'workflow'] },
+    { title: '🧹 Chore tasks', aliases: ['chore', 'deps'] },
+    { title: '🔙 Reverts', aliases: ['revert'] },
+    { title: '🎚️ Configuration changes', aliases: ['config', 'conf', 'cfg'] },
+    { title: '🚧 Development WIP', aliases: ['dev', 'wip'] },
+    { title: '🌐 Internazionalization changes', aliases: ['i18n'] },
+    { title: '🚀 Releases', aliases: ['release', 'rel'] },
+    { title: '🎨 Style changes', aliases: ['style', 'stl'] },
+    { title: '🏷️ Typings', aliases: ['typings', 'types'] },
+    { title: '📝 Other changes', aliases: [exports.FALLBACK_TYPE] },
+];
+
+
+/***/ }),
+
+/***/ 1235:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Logger = void 0;
+const core_1 = __nccwpck_require__(5681);
+/** log to action console */
+class Logger {
+    constructor() {
+        // private constructor to prevent instantiation
+    }
+    static log(message) {
+        if (typeof message !== 'string') {
+            message = JSON.stringify(message, null, 2);
+        }
+        (0, core_1.info)(message);
+    }
+    static info(message) {
+        if (typeof message !== 'string') {
+            message = JSON.stringify(message, null, 2);
+        }
+        (0, core_1.info)(message);
+    }
+    static debug(message) {
+        if (typeof message !== 'string') {
+            message = JSON.stringify(message, null, 2);
+        }
+        (0, core_1.debug)(message);
+    }
+    static notice(message, props) {
+        (0, core_1.notice)(message, props);
+    }
+    static err(message, props) {
+        (0, core_1.error)(message, props);
+    }
+    static warn(message, props) {
+        (0, core_1.warning)(message, props);
+    }
+}
+exports.Logger = Logger;
+
+
+/***/ }),
+
+/***/ 2396:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.trimLeftNonAlpha = exports.EmojiRegex = void 0;
+exports.EmojiRegex = /^(?:[^a-zA-Z0-9]){1,}/s;
+function trimLeftNonAlpha(str) {
+    if (!str)
+        return '';
+    return str.replace(exports.EmojiRegex, '').trim();
+}
+exports.trimLeftNonAlpha = trimLeftNonAlpha;
+
+
+/***/ }),
+
+/***/ 709:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ChangelogGenerator = void 0;
+const github_1 = __importDefault(__nccwpck_require__(1340));
+const logger_1 = __nccwpck_require__(1235);
+const conv_commit_1 = __nccwpck_require__(155);
+const md_1 = __nccwpck_require__(2916);
+class ChangelogGenerator {
+    constructor(input) {
+        this.input = input;
+        this.octokit = github_1.default.getOctokit(input.token);
+        this.owner = github_1.default.context.repo.owner;
+        this.repo = github_1.default.context.repo.repo;
+        console.log('Context:');
+        console.log(github_1.default.context);
+    }
+    static construct(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            logger_1.Logger.info(`Creating changelog generator`);
+            console.log(options);
+            const changelog = new ChangelogGenerator(options);
+            yield changelog.compareBaseHead();
+            changelog.setCommits();
+            return changelog;
+        });
+    }
+    compareBaseHead() {
+        return __awaiter(this, void 0, void 0, function* () {
+            this.comparison = yield this.octokit.paginate(this.octokit.rest.repos.compareCommitsWithBasehead, {
+                owner: this.owner,
+                repo: this.repo,
+                basehead: `${this.input.opts.from}...${this.input.opts.to}`,
+                per_page: 100,
+            });
+            if (!this.comparison) {
+                throw new Error(`Could not compare ${this.input.opts.from}...${this.input.opts.to}`);
+            }
+        });
+    }
+    setCommits() {
+        var _a;
+        if ((_a = this.comparison) === null || _a === void 0 ? void 0 : _a.commits) {
+            this.commits = (0, conv_commit_1.transformCommits)(this.comparison);
+            this.groupedCommits = (0, conv_commit_1.groupCommitsByType)(this.commits);
+        }
+    }
+    /** get markdown changelog */
+    get md() {
+        if (!this.groupedCommits)
+            return '';
+        return (0, md_1.toMd)(this.groupedCommits, `https://github.com/${this.owner}/${this.repo}/compare/${this.input.opts.from}...${this.input.opts.nextVersion}`);
+    }
+}
+exports.ChangelogGenerator = ChangelogGenerator;
+
+
+/***/ }),
+
+/***/ 155:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.groupCommitsByType = exports.transformCommits = exports.getTitle = exports.shortenHash = exports.SubjectBodyRegex = exports.CCRegex = exports.validConvComTypes = void 0;
+const common_types_1 = __nccwpck_require__(1460);
+const utils_1 = __nccwpck_require__(2396);
+//  validCommitTypes is an array of all the aliases of every conventionalCommitType except if it contains the fallback
+exports.validConvComTypes = common_types_1.ConventionalCommitTypes.filter((type) => !type.aliases.includes(common_types_1.FALLBACK_TYPE))
+    .map((type) => type.aliases)
+    .flat();
+/** Conventional commit regex */
+exports.CCRegex = generateConvCommitRegex();
+exports.SubjectBodyRegex = /(?<subject>[^\n]{1,}){0,}(?<body>.*\n*){0,}/s;
+/** Generate conventional commit regex */
+function generateConvCommitRegex() {
+    const types = exports.validConvComTypes.join('|');
+    return new RegExp(`^(?<type>${types})(?:\\s{0,})(?:\\((?<scope>.*)\\))?(?<breaking>!{0,1})?(?:\\s{0,}\\:\\s*)?(?<subject>.*)?$`, 'i');
+}
+function shortenHash(hash) {
+    if (!hash || hash.length < 7)
+        return hash || '';
+    return hash.slice(0, 7);
+}
+exports.shortenHash = shortenHash;
+// get ConventionalCommitTypes title by alias
+function getTitle(type) {
+    var _a;
+    const alias = type || common_types_1.FALLBACK_TYPE;
+    return ((_a = common_types_1.ConventionalCommitTypes.find((type) => type.aliases.includes(alias))) === null || _a === void 0 ? void 0 : _a.title) || '📝 Other changes';
+}
+exports.getTitle = getTitle;
+/* get Commit[] from ComparisonResponse */
+function transformCommits(comparisonResponse) {
+    return comparisonResponse.commits.map((obj) => {
+        var _a, _b, _c, _d, _e, _f;
+        let subject;
+        const commit = obj.commit;
+        const matchCommit = commit.message.match(exports.SubjectBodyRegex);
+        const msg = (0, utils_1.trimLeftNonAlpha)((_a = matchCommit === null || matchCommit === void 0 ? void 0 : matchCommit.groups) === null || _a === void 0 ? void 0 : _a.subject);
+        const body = ((_c = (_b = matchCommit === null || matchCommit === void 0 ? void 0 : matchCommit.groups) === null || _b === void 0 ? void 0 : _b.body) === null || _c === void 0 ? void 0 : _c.split('\n')) || [];
+        const matchConvCom = msg.match(exports.CCRegex);
+        if (!matchConvCom || !matchConvCom.groups) {
+            subject = { msg };
+        }
+        else {
+            const { type, scope, breaking, subject: msg } = matchConvCom.groups;
+            subject = {
+                type: type,
+                scope,
+                breaking: breaking ? true : false,
+                msg
+            };
+        }
+        return {
+            subject,
+            body,
+            hash: shortenHash(obj.sha) || '',
+            author: ((_d = obj.author) === null || _d === void 0 ? void 0 : _d.login) ? `@${(_e = obj.author) === null || _e === void 0 ? void 0 : _e.login}` : '',
+            date: ((_f = commit.author) === null || _f === void 0 ? void 0 : _f.date) || '',
+        };
+    });
+}
+exports.transformCommits = transformCommits;
+function groupCommitsByType(commits) {
+    const groups = new Map();
+    commits.forEach((commit) => {
+        const title = getTitle(commit.subject.type);
+        const group = groups.get(title);
+        if (group) {
+            group.push(commit);
+        }
+        else {
+            groups.set(title, [commit]);
+        }
+    });
+    return groups;
+}
+exports.groupCommitsByType = groupCommitsByType;
+
+
+/***/ }),
+
 /***/ 2322:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -9496,24 +9752,21 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.inputs = void 0;
 const core_1 = __nccwpck_require__(5681);
 function inputs() {
-    var _a, _b, _c, _d, _e;
+    var _a, _b, _c, _d;
     const token = (0, core_1.getInput)('token', { required: true });
-    const [owner, name] = (_a = (0, core_1.getInput)('repo', { required: true })) === null || _a === void 0 ? void 0 : _a.split('/');
     const from = (0, core_1.getInput)('from', { required: true });
     const to = (0, core_1.getInput)('to', { required: true });
-    const includeBody = ((_b = (0, core_1.getInput)('include-body', { required: false })) === null || _b === void 0 ? void 0 : _b.toLowerCase()) === 'true';
-    const includeHash = ((_c = (0, core_1.getInput)('include-hash', { required: false })) === null || _c === void 0 ? void 0 : _c.toLowerCase()) === 'true';
-    const includeAuthor = ((_d = (0, core_1.getInput)('include-author', { required: false })) === null || _d === void 0 ? void 0 : _d.toLowerCase()) === 'true';
-    const includePr = ((_e = (0, core_1.getInput)('include-pr', { required: false })) === null || _e === void 0 ? void 0 : _e.toLowerCase()) === 'true';
+    const nextVersion = (0, core_1.getInput)('next-version', { required: true });
+    const includeBody = ((_a = (0, core_1.getInput)('include-body', { required: false })) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === 'true';
+    const includeHash = ((_b = (0, core_1.getInput)('include-hash', { required: false })) === null || _b === void 0 ? void 0 : _b.toLowerCase()) === 'true';
+    const includeAuthor = ((_c = (0, core_1.getInput)('include-author', { required: false })) === null || _c === void 0 ? void 0 : _c.toLowerCase()) === 'true';
+    const includePr = ((_d = (0, core_1.getInput)('include-pr', { required: false })) === null || _d === void 0 ? void 0 : _d.toLowerCase()) === 'true';
     return {
         token,
-        repo: {
-            owner,
-            name,
-        },
         opts: {
             from,
             to,
+            nextVersion,
             include: {
                 body: includeBody,
                 hash: includeHash,
@@ -9524,6 +9777,41 @@ function inputs() {
     };
 }
 exports.inputs = inputs;
+
+
+/***/ }),
+
+/***/ 2916:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.toMd = void 0;
+/** Generates a markdown changelog from a list of commits. */
+function toMd(groups, full) {
+    const title = `## What's Changed\n\n`;
+    const footer = full ? `**Full Changelog**: ${full}` : '';
+    let sections = '';
+    groups.forEach((commits, title) => {
+        if (title !== '🚀 Releases') {
+            sections += commitSection(title, commits);
+        }
+    });
+    return `${title}${sections}${footer}`;
+}
+exports.toMd = toMd;
+function commitSection(title, commits) {
+    return `### ${title}\n` +
+        commits.map(commitItem).join('\n') +
+        '\n\n';
+}
+function commitItem(commit) {
+    const breaking = commit.subject.breaking ? '💥 ' : '';
+    const author = commit.author ? `, by ${commit.author}` : '';
+    const scope = commit.subject.scope ? `(${commit.subject.scope}) ` : '';
+    return `* ${breaking}${commit.hash} ${scope}${commit.subject.msg}${author}`;
+}
 
 
 /***/ }),
@@ -9543,19 +9831,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const core_1 = __nccwpck_require__(5681);
-const github_1 = __nccwpck_require__(1340);
+const logger_1 = __nccwpck_require__(1235);
+const changelog_generator_1 = __nccwpck_require__(709);
 const input_1 = __nccwpck_require__(2322);
 const opts = (0, input_1.inputs)();
-const octokit = (0, github_1.getOctokit)(opts.token);
-(0, core_1.info)('Getting commits');
-function getCommits() {
+logger_1.Logger.log('🏁 Changelog generator started');
+logger_1.Logger.log('Options: ');
+logger_1.Logger.log(opts);
+generateChangelog();
+function generateChangelog() {
     return __awaiter(this, void 0, void 0, function* () {
-        const commits = yield octokit.paginate(octokit.rest.repos.listCommits, {
-            owner: opts.repo.owner,
-            repo: opts.repo.name,
-            per_page: 100,
-        });
+        const gen = yield changelog_generator_1.ChangelogGenerator.construct(opts);
+        logger_1.Logger.log('📝 Generating changelog');
+        const md = gen.md;
+        logger_1.Logger.log('📝 Changelog generated');
+        logger_1.Logger.log(md);
     });
 }
 
