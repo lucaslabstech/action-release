@@ -27,9 +27,12 @@ inputs:
     required: false
     default: 'true'
   include-pr:
-    description: 'Include PR'
+    description: 'Include PR (not supported yet)'
     required: false
     default: 'true'
+outputs:
+  changelogs:
+    description: 'Changelogs'
 runs:
   using: 'node16'
   main: 'dist/index.js'

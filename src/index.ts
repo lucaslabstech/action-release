@@ -1,3 +1,4 @@
+import { setOutput } from '@actions/core';
 import { Logger } from './common/logger';
 import { ChangelogGenerator } from './core/changelog-generator';
 import { inputs } from './core/input';
@@ -15,4 +16,8 @@ async function generateChangelog() {
     const md = gen.md;
     Logger.log('📝 Changelog generated');
     Logger.log(md);
+
+    setOutput('changelogs', md);
+
+    Logger.log('Done');
 }

@@ -1,31 +1,47 @@
-import { Commit, ConvComTitle } from "../common/common.types";
+import { Commit, ConvComTitle } from '../common/common.types';
+import { InputIncludes } from './input';
 
 /** Generates a markdown changelog from a list of commits. */
-export function toMd(groups: Map<ConvComTitle, Commit[]>, full?: string) {
+export function toMd(
+    groups: Map<ConvComTitle, Commit[]>,
+    full?: string,
+    includes: InputIncludes = {
+        author: true,
+        body: true,
+        hash: true,
+        pr: true,
+    }
+): string {
     const title = `## What's Changed\n\n`;
     const footer = full ? `**Full Changelog**: ${full}` : '';
     let sections = '';
 
     groups.forEach((commits, title) => {
-        if(title !== '🚀 Releases') {
-            sections += commitSection(title, commits);
+        if (title !== '🚀 Releases') {
+            sections += sectionMd(title, commits, includes);
         }
-    })
+    });
 
     return `${title}${sections}${footer}`;
 }
 
-function commitSection(title: string, commits: Commit[]) {
-    return `### ${title}\n` +
-        commits.map(commitItem).join('\n') +
-        '\n\n';
+export function sectionMd(title: string, commits: Commit[], includes: InputIncludes) {
+    return (
+        `### ${title}\n` +
+        commits.map((commit) => itemMd(commit, includes)).join('\n') +
+        '\n\n'
+    );
 }
 
-function commitItem(commit: Commit) {
+export function itemMd(commit: Commit, includes: InputIncludes) {
     const breaking = commit.subject.breaking ? '💥 ' : '';
-    const author = commit.author ? `, by ${commit.author}` : '';
+    const author = commit.author && includes.author ? `, by ${commit.author}` : '';
     const scope = commit.subject.scope ? `(${commit.subject.scope}) ` : '';
+    const hash = includes.hash ? commit.hash + ' ' : '';
+    const body =
+        includes.body && commit.body && commit.body.length > 0
+            ? `\n\n  ${commit.body.filter(v=>v).join('\n  ')}`
+            : '';
 
-    return `* ${breaking}${commit.hash} ${scope}${commit.subject.msg}${author}`;
+    return `* ${breaking}${hash}${scope}${commit.subject.msg}${author}${body}`;
 }
-

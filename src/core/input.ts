@@ -26,17 +26,19 @@ export function inputs() {
     } as Input;
 }
 
+export interface InputIncludes {
+    body: boolean;
+    hash: boolean;
+    author: boolean;
+    pr: boolean;
+}
+
 export interface Input {
     token: string;
     opts: {
         from: string;
         to: string;
         nextVersion: string;
-        include: {
-            body: boolean;
-            hash: boolean;
-            author: boolean;
-            pr: boolean;
-        }
+        include: InputIncludes
     }
 }

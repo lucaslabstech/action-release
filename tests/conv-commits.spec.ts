@@ -108,8 +108,24 @@ describe('conv-commits', () => {
                 grouped,
                 'https://github.com/owner/repo/compare/v2.0.2...v2.0.5'
             );
+
             expect(md).toEqual(
-                `## What's Changed\n\n### 💡 New features\n* 💥 a4de96b (core) a new feature, by @jcolombo1\n* a3145cc alert message - binance PROD token, by @jcolombo1\n\n### 📝 Other changes\n* a3145cc this is a non conventional commit, by @jcolombo1\n\n**Full Changelog**: https://github.com/owner/repo/compare/v2.0.2...v2.0.5`
+                `## What's Changed\n\n### 💡 New features\n* 💥 a4de96b (core) a new feature, by @jcolombo1\n* a3145cc alert message - binance PROD token, by @jcolombo1\n\n  + adds an alert message when starting\n    the app in development mode, but\n    using PROD binance tokens.\n\n### 📝 Other changes\n* a3145cc this is a non conventional commit, by @jcolombo1\n\n**Full Changelog**: https://github.com/owner/repo/compare/v2.0.2...v2.0.5`
+            );
+        });
+
+        it('should generate markdown without body author and hash if asked to', () => {
+            const commits = getTestCommits();
+            const grouped = groupCommitsByType(commits);
+
+            const md = toMd(
+                grouped,
+                'https://github.com/owner/repo/compare/v2.0.2...v2.0.5',
+                { body: false, author: false, hash: false, pr: false }
+            );
+            
+            expect(md).toEqual(
+                `## What's Changed\n\n### 💡 New features\n* 💥 (core) a new feature\n* alert message - binance PROD token\n\n### 📝 Other changes\n* this is a non conventional commit\n\n**Full Changelog**: https://github.com/owner/repo/compare/v2.0.2...v2.0.5`
             );
         });
     });

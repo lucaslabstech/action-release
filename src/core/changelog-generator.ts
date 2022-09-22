@@ -18,9 +18,7 @@ export class ChangelogGenerator {
         this.octokit = getOctokit(input.token);
         this.owner = context.repo.owner;
         this.repo = context.repo.repo;
-
-        console.log('Context:');
-        console.log(context);
+        Logger.debug(context.payload.repository?.asd);
     }
 
     static async construct(options: Input) {

@@ -9606,12 +9606,12 @@ const conv_commit_1 = __nccwpck_require__(155);
 const md_1 = __nccwpck_require__(2916);
 class ChangelogGenerator {
     constructor(input) {
+        var _a;
         this.input = input;
         this.octokit = (0, github_1.getOctokit)(input.token);
         this.owner = github_1.context.repo.owner;
         this.repo = github_1.context.repo.repo;
-        console.log('Context:');
-        console.log(github_1.context);
+        logger_1.Logger.debug((_a = github_1.context.payload.repository) === null || _a === void 0 ? void 0 : _a.asd);
     }
     static construct(options) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -9784,31 +9784,42 @@ exports.inputs = inputs;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.toMd = void 0;
+exports.itemMd = exports.sectionMd = exports.toMd = void 0;
 /** Generates a markdown changelog from a list of commits. */
-function toMd(groups, full) {
+function toMd(groups, full, includes = {
+    author: true,
+    body: true,
+    hash: true,
+    pr: true,
+}) {
     const title = `## What's Changed\n\n`;
     const footer = full ? `**Full Changelog**: ${full}` : '';
     let sections = '';
     groups.forEach((commits, title) => {
         if (title !== '🚀 Releases') {
-            sections += commitSection(title, commits);
+            sections += sectionMd(title, commits, includes);
         }
     });
     return `${title}${sections}${footer}`;
 }
 exports.toMd = toMd;
-function commitSection(title, commits) {
-    return `### ${title}\n` +
-        commits.map(commitItem).join('\n') +
-        '\n\n';
+function sectionMd(title, commits, includes) {
+    return (`### ${title}\n` +
+        commits.map((commit) => itemMd(commit, includes)).join('\n') +
+        '\n\n');
 }
-function commitItem(commit) {
+exports.sectionMd = sectionMd;
+function itemMd(commit, includes) {
     const breaking = commit.subject.breaking ? '💥 ' : '';
-    const author = commit.author ? `, by ${commit.author}` : '';
+    const author = commit.author && includes.author ? `, by ${commit.author}` : '';
     const scope = commit.subject.scope ? `(${commit.subject.scope}) ` : '';
-    return `* ${breaking}${commit.hash} ${scope}${commit.subject.msg}${author}`;
+    const hash = includes.hash ? commit.hash + ' ' : '';
+    const body = includes.body && commit.body && commit.body.length > 0
+        ? `\n\n  ${commit.body.filter(v => v).join('\n  ')}`
+        : '';
+    return `* ${breaking}${hash}${scope}${commit.subject.msg}${author}${body}`;
 }
+exports.itemMd = itemMd;
 
 
 /***/ }),
@@ -9828,6 +9839,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core_1 = __nccwpck_require__(5681);
 const logger_1 = __nccwpck_require__(1235);
 const changelog_generator_1 = __nccwpck_require__(709);
 const input_1 = __nccwpck_require__(2322);
@@ -9843,6 +9855,8 @@ function generateChangelog() {
         const md = gen.md;
         logger_1.Logger.log('📝 Changelog generated');
         logger_1.Logger.log(md);
+        (0, core_1.setOutput)('changelogs', md);
+        logger_1.Logger.log('Done');
     });
 }
 
