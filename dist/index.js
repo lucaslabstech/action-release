@@ -9621,12 +9621,12 @@ class ChangelogGenerator {
     }
     compareBaseHead() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.comparison = yield this.octokit.paginate(this.octokit.rest.repos.compareCommitsWithBasehead, {
+            this.comparison = (yield this.octokit.rest.repos.compareCommitsWithBasehead({
                 owner: this.owner,
                 repo: this.repo,
                 basehead: `${this.input.opts.from}...${this.input.opts.to}`,
                 per_page: 100,
-            });
+            })).data;
             if (!this.comparison) {
                 throw new Error(`Could not compare ${this.input.opts.from}...${this.input.opts.to}`);
             }
