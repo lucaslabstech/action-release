@@ -1,0 +1,34 @@
+{
+    "files.exclude": {
+        // ⚙️ config
+        "**/**/tsconfig*": true,
+        ".npmrc": true,
+        "**/**/*code-workspace": true,
+        // ".github": true,
+        // "**/**/package.json": true,
+
+        // 🧼 linters & styles
+        "**/**/.prettierrc": true,
+        "**/**/.editorconfig": true,
+        "**/**/*.eslintrc.*": true,
+
+        // 📝 readmes
+        "**/**/README.md": true,
+
+        // 🗑️
+        "node_modules": true,
+        "pnpm-lock.yaml": true,
+        "yarn.lock": true,
+        "package-lock.json": true,
+        ".prettierignore": true,
+        ".gitignore": true,
+        ".git": true,
+        // "dist": true,
+        "coverage": true,
+        ".vscode": true,
+
+        // 🧪 tests 
+        // "**/**/tests": true,
+        "jest.config.*": true,
+    }
+}

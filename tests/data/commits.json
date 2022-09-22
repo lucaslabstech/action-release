@@ -1,0 +1,602 @@
+{
+    "url": "https://api.github.com/repos/lucas-labs/mr.data/compare/v2.0.7...v2.0.9",
+    "html_url": "https://github.com/lucas-labs/mr.data/compare/v2.0.7...v2.0.9",
+    "permalink_url": "https://github.com/lucas-labs/mr.data/compare/lucas-labs:3852a3a...lucas-labs:a3145cc",
+    "diff_url": "https://github.com/lucas-labs/mr.data/compare/v2.0.7...v2.0.9.diff",
+    "patch_url": "https://github.com/lucas-labs/mr.data/compare/v2.0.7...v2.0.9.patch",
+    "base_commit": {
+        "sha": "3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+        "node_id": "C_kwDOE-8qwtoAKDM4NTJhM2FkODk5ZmY2ZmVlMjA0NWNmMDE2MGM3NmYxZjMyZTdmNzY",
+        "commit": {
+            "author": {
+                "name": "Guiye",
+                "email": "jcolombo@ymail.com",
+                "date": "2022-09-15T02:16:59Z"
+            },
+            "committer": {
+                "name": "Guiye",
+                "email": "jcolombo@ymail.com",
+                "date": "2022-09-15T02:16:59Z"
+            },
+            "message": "Merge branch 'develop' of https://github.com/lucas-labs/mr.data into develop",
+            "tree": {
+                "sha": "67b3fd2dfbb9abff210174751cae14574cf2be55",
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/git/trees/67b3fd2dfbb9abff210174751cae14574cf2be55"
+            },
+            "url": "https://api.github.com/repos/lucas-labs/mr.data/git/commits/3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+        "html_url": "https://github.com/lucas-labs/mr.data/commit/3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+        "comments_url": "https://api.github.com/repos/lucas-labs/mr.data/commits/3852a3ad899ff6fee2045cf0160c76f1f32e7f76/comments",
+        "author": {
+            "login": "jcolombo1",
+            "id": 1483816,
+            "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jcolombo1",
+            "html_url": "https://github.com/jcolombo1",
+            "followers_url": "https://api.github.com/users/jcolombo1/followers",
+            "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+            "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+            "repos_url": "https://api.github.com/users/jcolombo1/repos",
+            "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jcolombo1",
+            "id": 1483816,
+            "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jcolombo1",
+            "html_url": "https://github.com/jcolombo1",
+            "followers_url": "https://api.github.com/users/jcolombo1/followers",
+            "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+            "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+            "repos_url": "https://api.github.com/users/jcolombo1/repos",
+            "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5979c59a981a230362ae08e1b9735d4c58cbdca4",
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/5979c59a981a230362ae08e1b9735d4c58cbdca4",
+                "html_url": "https://github.com/lucas-labs/mr.data/commit/5979c59a981a230362ae08e1b9735d4c58cbdca4"
+            },
+            {
+                "sha": "c44dec77b4ae12212d2dd83afce18b30925eb8f4",
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/c44dec77b4ae12212d2dd83afce18b30925eb8f4",
+                "html_url": "https://github.com/lucas-labs/mr.data/commit/c44dec77b4ae12212d2dd83afce18b30925eb8f4"
+            }
+        ]
+    },
+    "merge_base_commit": {
+        "sha": "3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+        "node_id": "C_kwDOE-8qwtoAKDM4NTJhM2FkODk5ZmY2ZmVlMjA0NWNmMDE2MGM3NmYxZjMyZTdmNzY",
+        "commit": {
+            "author": {
+                "name": "Guiye",
+                "email": "jcolombo@ymail.com",
+                "date": "2022-09-15T02:16:59Z"
+            },
+            "committer": {
+                "name": "Guiye",
+                "email": "jcolombo@ymail.com",
+                "date": "2022-09-15T02:16:59Z"
+            },
+            "message": "Merge branch 'develop' of https://github.com/lucas-labs/mr.data into develop",
+            "tree": {
+                "sha": "67b3fd2dfbb9abff210174751cae14574cf2be55",
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/git/trees/67b3fd2dfbb9abff210174751cae14574cf2be55"
+            },
+            "url": "https://api.github.com/repos/lucas-labs/mr.data/git/commits/3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+        "html_url": "https://github.com/lucas-labs/mr.data/commit/3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+        "comments_url": "https://api.github.com/repos/lucas-labs/mr.data/commits/3852a3ad899ff6fee2045cf0160c76f1f32e7f76/comments",
+        "author": {
+            "login": "jcolombo1",
+            "id": 1483816,
+            "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jcolombo1",
+            "html_url": "https://github.com/jcolombo1",
+            "followers_url": "https://api.github.com/users/jcolombo1/followers",
+            "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+            "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+            "repos_url": "https://api.github.com/users/jcolombo1/repos",
+            "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "jcolombo1",
+            "id": 1483816,
+            "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jcolombo1",
+            "html_url": "https://github.com/jcolombo1",
+            "followers_url": "https://api.github.com/users/jcolombo1/followers",
+            "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+            "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+            "repos_url": "https://api.github.com/users/jcolombo1/repos",
+            "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5979c59a981a230362ae08e1b9735d4c58cbdca4",
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/5979c59a981a230362ae08e1b9735d4c58cbdca4",
+                "html_url": "https://github.com/lucas-labs/mr.data/commit/5979c59a981a230362ae08e1b9735d4c58cbdca4"
+            },
+            {
+                "sha": "c44dec77b4ae12212d2dd83afce18b30925eb8f4",
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/c44dec77b4ae12212d2dd83afce18b30925eb8f4",
+                "html_url": "https://github.com/lucas-labs/mr.data/commit/c44dec77b4ae12212d2dd83afce18b30925eb8f4"
+            }
+        ]
+    },
+    "status": "ahead",
+    "ahead_by": 2,
+    "behind_by": 0,
+    "total_commits": 2,
+    "commits": [
+        {
+            "sha": "a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+            "node_id": "C_kwDOE-8qwtoAKGE0ZGU5NmJjNTkxNjg1MmNlYTlhMDExN2YyYTBmODZmOGMwYzQ4ZTU",
+            "commit": {
+                "author": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-15T22:01:40Z"
+                },
+                "committer": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-15T22:01:40Z"
+                },
+                "message": "feat(core)!: a new feature",
+                "tree": {
+                    "sha": "99a2fb42e7a9f385f32e59b925e57bc8e0d958a2",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/git/trees/99a2fb42e7a9f385f32e59b925e57bc8e0d958a2"
+                },
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/git/commits/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+            "html_url": "https://github.com/lucas-labs/mr.data/commit/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+            "comments_url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5/comments",
+            "author": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/3852a3ad899ff6fee2045cf0160c76f1f32e7f76",
+                    "html_url": "https://github.com/lucas-labs/mr.data/commit/3852a3ad899ff6fee2045cf0160c76f1f32e7f76"
+                }
+            ]
+        },
+        {
+            "sha": "a3145cc3da019c5063382184599694758784f2a4",
+            "node_id": "C_kwDOE-8qwtoAKGEzMTQ1Y2MzZGEwMTljNTA2MzM4MjE4NDU5OTY5NDc1ODc4NGYyYTQ",
+            "commit": {
+                "author": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-16T19:10:33Z"
+                },
+                "committer": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-16T19:10:33Z"
+                },
+                "message": "release: 🚀 v2.0.9",
+                "tree": {
+                    "sha": "488950ce01b471bc65f6e1fffc10e784ee17ec08",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/git/trees/488950ce01b471bc65f6e1fffc10e784ee17ec08"
+                },
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/git/commits/a3145cc3da019c5063382184599694758784f2a4",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a3145cc3da019c5063382184599694758784f2a4",
+            "html_url": "https://github.com/lucas-labs/mr.data/commit/a3145cc3da019c5063382184599694758784f2a4",
+            "comments_url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a3145cc3da019c5063382184599694758784f2a4/comments",
+            "author": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                    "html_url": "https://github.com/lucas-labs/mr.data/commit/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5"
+                }
+            ]
+        },
+        {
+            "sha": "a3145cc3da019c5063382184599694758784f2a4",
+            "node_id": "C_kwDOE-8qwtoAKGEzMTQ1Y2MzZGEwMTljNTA2MzM4MjE4NDU5OTY5NDc1ODc4NGYyYTQ",
+            "commit": {
+                "author": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-16T19:10:33Z"
+                },
+                "committer": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-16T19:10:33Z"
+                },
+                "message": "feat: alert message - binance PROD token\n\n+ adds an alert message when starting\n  the app in development mode, but\n  using PROD binance tokens.",
+                "tree": {
+                    "sha": "488950ce01b471bc65f6e1fffc10e784ee17ec08",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/git/trees/488950ce01b471bc65f6e1fffc10e784ee17ec08"
+                },
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/git/commits/a3145cc3da019c5063382184599694758784f2a4",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a3145cc3da019c5063382184599694758784f2a4",
+            "html_url": "https://github.com/lucas-labs/mr.data/commit/a3145cc3da019c5063382184599694758784f2a4",
+            "comments_url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a3145cc3da019c5063382184599694758784f2a4/comments",
+            "author": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                    "html_url": "https://github.com/lucas-labs/mr.data/commit/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5"
+                }
+            ]
+        },
+        {
+            "sha": "a3145cc3da019c5063382184599694758784f2a4",
+            "node_id": "C_kwDOE-8qwtoAKGEzMTQ1Y2MzZGEwMTljNTA2MzM4MjE4NDU5OTY5NDc1ODc4NGYyYTQ",
+            "commit": {
+                "author": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-16T19:10:33Z"
+                },
+                "committer": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-16T19:10:33Z"
+                },
+                "message": "🚀 release: v2.0.7",
+                "tree": {
+                    "sha": "488950ce01b471bc65f6e1fffc10e784ee17ec08",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/git/trees/488950ce01b471bc65f6e1fffc10e784ee17ec08"
+                },
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/git/commits/a3145cc3da019c5063382184599694758784f2a4",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a3145cc3da019c5063382184599694758784f2a4",
+            "html_url": "https://github.com/lucas-labs/mr.data/commit/a3145cc3da019c5063382184599694758784f2a4",
+            "comments_url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a3145cc3da019c5063382184599694758784f2a4/comments",
+            "author": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                    "html_url": "https://github.com/lucas-labs/mr.data/commit/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5"
+                }
+            ]
+        },
+        {
+            "sha": "a3145cc3da019c5063382184599694758784f2a4",
+            "node_id": "C_kwDOE-8qwtoAKGEzMTQ1Y2MzZGEwMTljNTA2MzM4MjE4NDU5OTY5NDc1ODc4NGYyYTQ",
+            "commit": {
+                "author": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-16T19:10:33Z"
+                },
+                "committer": {
+                    "name": "Guiye",
+                    "email": "jcolombo@ymail.com",
+                    "date": "2022-09-16T19:10:33Z"
+                },
+                "message": "this is a non conventional commit",
+                "tree": {
+                    "sha": "488950ce01b471bc65f6e1fffc10e784ee17ec08",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/git/trees/488950ce01b471bc65f6e1fffc10e784ee17ec08"
+                },
+                "url": "https://api.github.com/repos/lucas-labs/mr.data/git/commits/a3145cc3da019c5063382184599694758784f2a4",
+                "comment_count": 0,
+                "verification": {
+                    "verified": false,
+                    "reason": "unsigned",
+                    "signature": null,
+                    "payload": null
+                }
+            },
+            "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a3145cc3da019c5063382184599694758784f2a4",
+            "html_url": "https://github.com/lucas-labs/mr.data/commit/a3145cc3da019c5063382184599694758784f2a4",
+            "comments_url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a3145cc3da019c5063382184599694758784f2a4/comments",
+            "author": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "committer": {
+                "login": "jcolombo1",
+                "id": 1483816,
+                "node_id": "MDQ6VXNlcjE0ODM4MTY=",
+                "avatar_url": "https://avatars.githubusercontent.com/u/1483816?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/jcolombo1",
+                "html_url": "https://github.com/jcolombo1",
+                "followers_url": "https://api.github.com/users/jcolombo1/followers",
+                "following_url": "https://api.github.com/users/jcolombo1/following{/other_user}",
+                "gists_url": "https://api.github.com/users/jcolombo1/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/jcolombo1/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/jcolombo1/subscriptions",
+                "organizations_url": "https://api.github.com/users/jcolombo1/orgs",
+                "repos_url": "https://api.github.com/users/jcolombo1/repos",
+                "events_url": "https://api.github.com/users/jcolombo1/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/jcolombo1/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "parents": [
+                {
+                    "sha": "a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                    "url": "https://api.github.com/repos/lucas-labs/mr.data/commits/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5",
+                    "html_url": "https://github.com/lucas-labs/mr.data/commit/a4de96bc5916852cea9a0117f2a0f86f8c0c48e5"
+                }
+            ]
+        }
+    ],
+    "files": [
+        {
+            "sha": "a1e0209ac3abd8164b8dd23256d27f0ebb84e3d6",
+            "filename": "libs/mr.data.core/src/lib/strategy/strategies/mrdata7b.strategy.ts",
+            "status": "modified",
+            "additions": 71,
+            "deletions": 32,
+            "changes": 103,
+            "blob_url": "https://github.com/lucas-labs/mr.data/blob/a3145cc3da019c5063382184599694758784f2a4/libs%2Fmr.data.core%2Fsrc%2Flib%2Fstrategy%2Fstrategies%2Fmrdata7b.strategy.ts",
+            "raw_url": "https://github.com/lucas-labs/mr.data/raw/a3145cc3da019c5063382184599694758784f2a4/libs%2Fmr.data.core%2Fsrc%2Flib%2Fstrategy%2Fstrategies%2Fmrdata7b.strategy.ts",
+            "contents_url": "https://api.github.com/repos/lucas-labs/mr.data/contents/libs%2Fmr.data.core%2Fsrc%2Flib%2Fstrategy%2Fstrategies%2Fmrdata7b.strategy.ts?ref=a3145cc3da019c5063382184599694758784f2a4",
+            "patch": "@@ -19,7 +19,7 @@\n  * \n  */\n \n-import { difp, rnd2 } from '@mr.data/common';\n+import { difp, rnd1, rnd2 } from '@mr.data/common';\n import { OrderType, StrategyConfig } from '@mr.data/common';\n import { Strategy } from \"../strategy\";\n import { CandlestickInterval, CandleStick } from '@mr.data/common';\n@@ -83,6 +83,9 @@ export class MrData7bConfig extends StrategyConfig {\n     @IsDefined()\n     dumpOrdersOnly : boolean;                                   // si set, realizará dumpping de datos de cada vela (datos para graficos)\n \n+    @IsDefined()\n+    dumpStatsEach:  number;                                     // lapso en segundos del informe estadistico\n+\n     @IsDefined()\n     maxDataWait:    number;                                     // max espera de velas (segundos), reistrar log! en caso de su sobrepasado \n \n@@ -204,7 +207,8 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n \n         dumpData:          false,\n         dumpOrdersOnly:    false,\n-        maxDataWait:       15,               \n+        dumpStatsEach:     60*15,               // en segungos (15 min)\n+        maxDataWait:       15,                  // log de alerta si se supera esta espera de datos (en segungos)!          \n         candlesCount:      200,\n         allowedOrders:     OrderType.BOTH,\n         timeFrame:         CandlestickInterval.FIVE_MINUTES,       //METODO \"CORTO\"\n@@ -266,13 +270,16 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n \n     /** ---------  para estadísticas  ----------------- */\n \n-    signalsCount        =     0;                        //cantidad de signals enviadas\n-    candlesFromHour     =     0;                        //cantidad de velas desde ultima hora\n-    candlesFromSignal   =     0;                        //cantidad de velas desde ultima señal (o del inicio)\n-    candlesFromFinal    =     0;                        //cantidad de velas desde ultima candle.final\n-    hourClock           =     new Date().getTime();\n-    initClock           =     new Date().getTime();\n-    signalClock         =     new Date().getTime();        \n+    signalsCounter      =   0;                        //cantidad de signals enviadas\n+    candlesCounter      =   0;                        //cantidad de velas desde ultima hora\n+    initClock           =   new Date().getTime();\n+    statsClock          =   new Date().getTime();     // para waiting X seg luego de una orden\n+    longCounter         =   0;\n+    shortCounter        =   0;\n+    tpCounter           =   0;\n+    slCounter           =   0;\n+\n+    /** ---------  posición actual   ----------------- */\n \n     currSignalType =        SignalType.CLOSE;       //actual posición en curso en el broker \n     currOrderPrice:         number;                  //precio de ultima orden \n@@ -311,6 +318,7 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n     clock2              = new Date().getTime();     // para waiting X seg luego de una orden\n \n     dumpIdx:            string;                     // solo para debug & stop en linea de Dump específica \n+    results:            number[];\n \n     //dayCandle = new GreaterCandleAccumulator( CandlestickInterval.ONE_HOUR, CandlestickInterval.ONE_DAY );\n \n@@ -319,6 +327,7 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n     */\n     onInit() {\n         this.config = MrData7b.defaultConfig;\n+        //console.log(this.context.id);\n     }\n  \n     /** ----------------------------------------------------------------------------------------------------\n@@ -327,7 +336,7 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n      * Además ya fue \"pisado\" this.config con los parámatros de query POST. \n      */\n     onInitialCandles(): void {\n-        \n+\n         this.noRun = this._tester() ;\n         if (this.noRun) return;\n \n@@ -392,7 +401,6 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n         const isLive: boolean = this.executionMode == ExecutionMode.Live || this.executionMode == ExecutionMode.LiveTest ;\n \n         const fired_ant = this.fired ;\n-        const small_ant = this.small ; \n \n         if ( candle.isFinal ) {\n \n@@ -461,7 +469,7 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n             const lapsoSeg1 = (new Date().getTime()-this.clock1)/1000 ;\n             this.clock1 = new Date().getTime(); //reset\n             if ( lapsoSeg1 > this.config.maxDataWait ) {   \n-                this.logger.warn(`ALERTA: no se recibieron datos durante ${lapsoSeg1} segundos (> a ${this.config.maxDataWait})`);\n+                this.logger.warn(`ALERTA: no se recibieron datos durante ${rnd1(lapsoSeg1)} segundos (> a ${this.config.maxDataWait})`);\n             } \n            \n             if ( this.context.lastSignal?.status === SignalStatus.PENDING || this.context.lastSignal?.status === SignalStatus.IN_PROGRESS ) {\n@@ -508,16 +516,16 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n \n         if ( withSignals ) {\n \n-            this.candlesFromSignal++;\n-\n             //console.log(`this.currOrderPrice: ${this.currOrderPrice}`)\n \n+            this.candlesCounter++;      //statistics\n+\n             this.updateStoplossPrice( candle.close, candle.isFinal );\n             this.updateTakeProfitPrice( this.currOrderPrice );\n             \n             // ------ Check de las condiciones de la estrategia \n \n-            if ( this.nextSignal ) {            //hay signal pendiente ? (seguramente x fired TP)\n+            if ( this.nextSignal ) {            //hay signal pendiente ? (x fired TP)\n \n                 new_signal      = this.nextSignal;\n                 new_flag        = new_signal;\n@@ -541,7 +549,6 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n                 new_flag = new_signal ? new_signal : '';\n             }\n \n-            \n             /**\n              * ------- Check STOP LOSS o TAKE PROFIT -------\n              */\n@@ -579,41 +586,42 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n \n                     if ( !this.config.revertOrder || this.fired ) {\n                         new_signal = SignalType.CLOSE ; \n-                    } else { \n-                        new_flag = new_signal +'.'+ new_flag ; \n                     }\n                     \n                     /** --- Si \"fired\" hacer CLOSE y en sig candle volver a posic actual --- */\n \n                     if ( this.fired && this.config.quickOrderFired ) {\n                         this.nextSignal = this.currSignalType ;     // no esperar prox candle final (hacerlo ya!)\n                     }\n-\n                 }\n \n                 if ( new_signal ) {             \n \n                     if ( ( this.fired && this.config.quickOrderFired ) || ( !this.fired && this.config.revertOrder ) ) {\n-                        new_flag = new_signal +'.'+ new_flag ; \n+                        // nada\n                     } else {\n                         new_signal = SignalType.CLOSE ; \n-                    }    \n+                    }\n+                    \n+                    new_flag = new_signal +'.'+ new_flag ;     \n                 }\n \n             }\n \n             returnSignal = new_signal ? this.decideOrderSignal(new_price, new_signal) : null ;           // enviar la orden si es necesario\n \n         }\n-        \n+\n+        this.results = this.calculateResult(new_price, returnSignal);\n+\n         /**\n          * DUMP PARA GRAFICAR\n          */\n         if ( this.config.dumpData && withSignals ) {\n \n             if (!this.config.dumpOrdersOnly || returnSignal ) {\n \n-                const lap = this.candlesFromSignal==1 ; //|| rnd(this.cycles%20)==0   //true ; //rnd2( this.cycles % 10 ) == 0\n+                const lap = this.candlesCounter==1 ; //|| rnd(this.cycles%20)==0   //true ; //rnd2( this.cycles % 10 ) == 0\n \n                 //if ( ( this.executionMode==ExecutionMode.Live && process.env.BINANCE_ENDPOINT=='TEST' && ( returnSignal || (new Date().getSeconds()%20)==0 ) ) || this.executionMode == ExecutionMode.Backtest ) {\n     \n@@ -625,25 +633,24 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n                     const col_short = returnSignal?.type===SignalType.SHORT ? returnSignal?.price : 0 ;\n                     const col_long  = returnSignal?.type===SignalType.LONG  ? returnSignal?.price : 0 ;\n                     const col_close = returnSignal?.type===SignalType.CLOSE ? returnSignal?.price : 0 ;\n-                    const col_result = this.calculateResult(new_price, returnSignal);\n+                    this.results = this.calculateResult(new_price, returnSignal);\n                     const col_mmm = this.m3>this.m4 ? '3>4' : '3<4';\n                     let col_graf = this.fired > 0 ? '🟩' : this.fired < 0 ? '🟨' : ''; \n-                    col_graf = col_graf + (this.small ? 'SMALL' : '' );  \n-                    const log = `${this.dumpIdx};${rnd2(candle.close)};${rnd2(candle.low)};${rnd2(candle.high)};${col_graf};${rnd2(ao)};${col_mmm};${rnd2(this.currOrderPrice)};${returnSignal?new_flag:''};${rnd2(col_long)};${rnd2(col_short)};${rnd2(col_close)};${rnd2(this.SLprice)||0};${rnd2(this.TPprice)};${rnd2(col_result[0])}` ;\n-                    if (isLive) this.logger.debug(log); else console.log(log) ;\n+                    col_graf = col_graf + (this.small ? 'SMALL' : '' );\n+                    const log = `${this.context.id};${this.dumpIdx};${rnd2(candle.close)};${rnd2(candle.low)};${rnd2(candle.high)};${col_graf};${rnd2(ao)};${col_mmm};${rnd2(this.currOrderPrice)};${returnSignal?new_flag:''};${rnd2(col_long)};${rnd2(col_short)};${rnd2(col_close)};${rnd2(this.SLprice)||0};${rnd2(this.TPprice)};${rnd2(this.results[0])}` ;\n+                    //if (isLive) this.logger.debug(log); else console.log(log) ;\n+                    console.log(log);\n     \n                 }\n-    \n             }\n-\n         }\n \n         //if (this.fired != fired_ant ) this.logger.debug(`Estado FIRED ahora es ${this.fired}`) ;\n         //if (this.small != small_ant ) this.logger.debug(`Estado SMALL ahora es ${this.fired}`) ;\n \n         if ( returnSignal ) {             // set / reset lo necesario ante una nva señal\n \n-            this.signalsCount++;\n+            this.signalsCounter++;\n             this.clock2     = new Date().getTime() ;        // para waiting X seg luedo de una orden\n             this.TPprice    = 0 ; \n             this.SLprice    = 0 ;\n@@ -653,16 +660,48 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n             if ( this.executionMode == ExecutionMode.Backtest ) {\n                 this.currOrderPrice = new_signal === SignalType.CLOSE ? 0 : new_price  ;       // En BACKTEST para obtener el precio de la ult orden\n                 this.currSignalType = new_signal ;\n-            }    \n+            }\n+\n+            this.registerStatistics(new_flag);\n \n         } \n \n         if ( candle.isFinal ) this.previous_close = candle.close ;        //save close anteriro (requerido para upd de SL)\n \n+        this.logStatistics( this.candlesCounter==1 );\n+\n         return returnSignal ;\n  \n     }\n \n+    /** ------------------ Loggear Statistics ------------------ */\n+\n+    private logStatistics(force = false) {\n+\n+        //force = ( this.dumpIdx==\"14/09 22:30* [L>]\" );      // ******only for dev test\n+\n+        if ( force || ( this.config.dumpStatsEach > 0 && ( this.executionMode == ExecutionMode.Live || this.executionMode == ExecutionMode.LiveTest ) ) ) {\n+\n+            const now = new Date().getTime()\n+\n+            if ( force || ( ( (now-this.statsClock)/1000) > this.config.dumpStatsEach ) ) {     //check si lapso para informar\n+                const hs = (now-this.initClock)/3600000; // de time a horas\n+                const profit = this.results[0]!=0 ? `Profit: [ ${rnd1(this.results[0])}%, $${rnd2(this.results[1])} ], ` : '';\n+                const cs = `[ ${profit}Longs: ${this.longCounter} | Shorts: ${this.shortCounter} | TP: ${this.tpCounter} | SL: ${this.slCounter} ]`\n+                const log = `Statistics at ${rnd1(hs)} hs.: ${rnd1(this.candlesCounter/hs)} candles/hs, ${rnd1(this.signalsCounter)} signals - ${cs}`;\n+                this.logger.debug(log);\n+                this.statsClock = now;     //set\n+            }\n+        }\n+    }\n+\n+    private registerStatistics(new_flag: string) {\n+        if (new_flag.includes('SHORT')) this.shortCounter++ ;\n+        if (new_flag.includes('LONG')) this.longCounter++ ;\n+        if (new_flag.includes('TP')) this.tpCounter++ ;\n+        if (new_flag.includes('SL')) this.slCounter++ ;\n+    }\n+\n     private calculateResult(price: number, signal: Signal): number[] {\n         if (!signal) return [0,0]; //throw new Error(\"No se debe convocar método resultCalcule() si no se lanzó una nueva orden/señal\") ;\n         let r = 0, p = 0 ;\n@@ -770,7 +809,7 @@ export class MrData7b extends Strategy<MrData7bConfig> {\n  \n         let ret: Signal = null;\n \n-        if ( !this.signalsCount && this.config.startWithSignal && this.config.startWithSignal != new_signal ) return null;\n+        if ( !this.signalsCounter && this.config.startWithSignal && this.config.startWithSignal != new_signal ) return null;\n \n         if ( (this.config.allowedOrders=='SHORT' && new_signal==SignalType.LONG) || \n              (this.config.allowedOrders=='LONG'  && new_signal==SignalType.SHORT) ) new_signal = SignalType.CLOSE;      // correjir si debe ser sólo Close (no BOTH)"
+        },
+        {
+            "sha": "cad2428977119da87debaf01f66c20ccb9d5a5d4",
+            "filename": "package.json",
+            "status": "modified",
+            "additions": 1,
+            "deletions": 1,
+            "changes": 2,
+            "blob_url": "https://github.com/lucas-labs/mr.data/blob/a3145cc3da019c5063382184599694758784f2a4/package.json",
+            "raw_url": "https://github.com/lucas-labs/mr.data/raw/a3145cc3da019c5063382184599694758784f2a4/package.json",
+            "contents_url": "https://api.github.com/repos/lucas-labs/mr.data/contents/package.json?ref=a3145cc3da019c5063382184599694758784f2a4",
+            "patch": "@@ -1,6 +1,6 @@\n {\n     \"name\": \"mr.data\",\n-    \"version\": \"2.0.7\",\n+    \"version\": \"2.0.9\",\n     \"license\": \"MIT\",\n     \"scripts\": {\n         \"nx\": \"nx\","
+        }
+    ]
+}

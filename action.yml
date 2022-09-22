@@ -1,0 +1,38 @@
+name: 'action-release'
+author: 'Lucas Colombo'
+description: 'Create a release changelog based on commits'
+inputs:
+  token:
+    description: 'GitHub token'
+    required: true
+  from:
+    description: 'From tag/commit'
+    required: true
+  to:
+    description: 'To tag/commit'
+    required: true
+  next-version:
+    description: 'Next version'
+    required: true
+  include-body:
+    description: 'Include body'
+    required: false
+    default: 'true'
+  include-hash:
+    description: 'Include hash'
+    required: false
+    default: 'true'
+  include-author:
+    description: 'Include author'
+    required: false
+    default: 'true'
+  include-pr:
+    description: 'Include PR (not supported yet)'
+    required: false
+    default: 'true'
+outputs:
+  changelogs:
+    description: 'Changelogs'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
