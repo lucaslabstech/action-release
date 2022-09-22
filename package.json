@@ -1,6 +1,6 @@
 {
     "name": "action-release",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Github action for automating releases🚀 inside @lucas-labs",
     "main": "dist/index.js",
     "scripts": {
