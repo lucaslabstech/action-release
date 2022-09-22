@@ -4,7 +4,7 @@
         "**/**/tsconfig*": true,
         ".npmrc": true,
         "**/**/*code-workspace": true,
-        ".github": true,
+        // ".github": true,
         // "**/**/package.json": true,
 
         // 🧼 linters & styles

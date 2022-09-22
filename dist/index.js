@@ -9549,7 +9549,6 @@ const input_1 = __nccwpck_require__(2322);
 const opts = (0, input_1.inputs)();
 const octokit = (0, github_1.getOctokit)(opts.token);
 (0, core_1.info)('Getting commits');
-getCommits();
 function getCommits() {
     return __awaiter(this, void 0, void 0, function* () {
         const commits = yield octokit.paginate(octokit.rest.repos.listCommits, {
@@ -9557,7 +9556,6 @@ function getCommits() {
             repo: opts.repo.name,
             per_page: 100,
         });
-        console.log(commits);
     });
 }
 

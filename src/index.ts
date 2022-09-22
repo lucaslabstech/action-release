@@ -1,22 +1,19 @@
-import { info } from '@actions/core';
 import { getOctokit } from '@actions/github';
+import { Logger } from './common/logger';
+import { ChangelogGenerator } from './core/changelog-generator';
 import { inputs } from './core/input';
 
 const opts = inputs();
-const octokit = getOctokit(opts.token);
+Logger.log('🏁 Changelog generator started');
+Logger.log('Options: ');
+Logger.log(opts);
 
-info('Getting commits');
-getCommits();
+generateChangelog();
 
-async function getCommits() {
-    const commits = await octokit.paginate(
-        octokit.rest.repos.listCommits,
-        {
-            owner: opts.repo.owner,
-            repo: opts.repo.name,
-            per_page: 100,
-        }
-    )
-
-    console.log(commits);
+async function generateChangelog() {
+    const gen = await ChangelogGenerator.construct(opts);
+    Logger.log('📝 Generating changelog');
+    const md = gen.md;
+    Logger.log('📝 Changelog generated');
+    Logger.log(md);
 }

@@ -2,9 +2,9 @@ import { getInput } from '@actions/core';
 
 export function inputs() {
     const token = getInput('token', { required: true });
-    const [owner, name] = getInput('repo', { required: true })?.split('/');
     const from = getInput('from', { required: true });
     const to = getInput('to', { required: true });
+    const nextVersion = getInput('next-version', { required: true });
     const includeBody = getInput('include-body', { required: false })?.toLowerCase() === 'true';
     const includeHash = getInput('include-hash', { required: false })?.toLowerCase() === 'true';
     const includeAuthor = getInput('include-author', { required: false })?.toLowerCase() === 'true';
@@ -12,13 +12,10 @@ export function inputs() {
 
     return {
         token,
-        repo: {
-            owner,
-            name,
-        },
         opts: {
             from,
             to,
+            nextVersion,
             include: {
                 body: includeBody,
                 hash: includeHash,
@@ -31,13 +28,10 @@ export function inputs() {
 
 export interface Input {
     token: string;
-    repo: {
-        owner: string;
-        name: string;
-    };
     opts: {
         from: string;
         to: string;
+        nextVersion: string;
         include: {
             body: boolean;
             hash: boolean;

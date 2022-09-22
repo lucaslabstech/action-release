@@ -5,14 +5,14 @@ inputs:
   token:
     description: 'GitHub token'
     required: true
-  repo:
-    description: 'Repository to release'
-    required: true
   from:
-    description: 'From tag'
+    description: 'From tag/commit'
     required: true
   to:
-    description: 'To tag'
+    description: 'To tag/commit'
+    required: true
+  next-version:
+    description: 'Next version'
     required: true
   include-body:
     description: 'Include body'
