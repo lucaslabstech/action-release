@@ -29,15 +29,12 @@ export class ChangelogGenerator {
     }
 
     private async compareBaseHead() {
-        this.comparison = await this.octokit.paginate(
-            this.octokit.rest.repos.compareCommitsWithBasehead,
-            {
-                owner: this.owner,
-                repo: this.repo,
-                basehead: `${this.input.opts.from}...${this.input.opts.to}`,
-                per_page: 100,
-            }
-        );
+        this.comparison = (await this.octokit.rest.repos.compareCommitsWithBasehead({
+            owner: this.owner,
+            repo: this.repo,
+            basehead: `${this.input.opts.from}...${this.input.opts.to}`,
+            per_page: 100,
+        })).data;
 
         if (!this.comparison) {
             throw new Error(
