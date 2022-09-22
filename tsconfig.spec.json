@@ -4,7 +4,9 @@
         "outDir": "../../dist/out-tsc",
         "composite": true,
         "module": "commonjs",
-        "types": ["jest", "node"]
+        "types": ["jest", "node"],
+        "esModuleInterop": true,
+        "resolveJsonModule": true
     },
     "include": [
         "**/*.spec.ts",
@@ -16,6 +18,9 @@
         "**/*.spec.jsx",
         "**/*.test.jsx",
         "**/*.d.ts",
+        "tests/data",
+        "tests/data/**/*.json",
+        ".",
         "jest.config.ts"
     ]
 }
