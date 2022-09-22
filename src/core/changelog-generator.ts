@@ -1,4 +1,4 @@
-import gh from '@actions/github';
+import { getOctokit, context } from '@actions/github';
 import { GitHub } from '@actions/github/lib/utils';
 import { Commit, ComparisonResponse, ConvComTitle } from '../common/common.types';
 import { Logger } from '../common/logger';
@@ -15,12 +15,12 @@ export class ChangelogGenerator {
     public groupedCommits?: Map<ConvComTitle, Commit[]>;
 
     private constructor(private input: Input) {
-        this.octokit = gh.getOctokit(input.token);
-        this.owner = gh.context.repo.owner;
-        this.repo = gh.context.repo.repo;
+        this.octokit = getOctokit(input.token);
+        this.owner = context.repo.owner;
+        this.repo = context.repo.repo;
 
         console.log('Context:');
-        console.log(gh.context);
+        console.log(context);
     }
 
     static async construct(options: Input) {

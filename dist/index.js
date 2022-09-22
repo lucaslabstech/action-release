@@ -9598,23 +9598,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ChangelogGenerator = void 0;
-const github_1 = __importDefault(__nccwpck_require__(1340));
+const github_1 = __nccwpck_require__(1340);
 const logger_1 = __nccwpck_require__(1235);
 const conv_commit_1 = __nccwpck_require__(155);
 const md_1 = __nccwpck_require__(2916);
 class ChangelogGenerator {
     constructor(input) {
         this.input = input;
-        this.octokit = github_1.default.getOctokit(input.token);
-        this.owner = github_1.default.context.repo.owner;
-        this.repo = github_1.default.context.repo.repo;
+        this.octokit = (0, github_1.getOctokit)(input.token);
+        this.owner = github_1.context.repo.owner;
+        this.repo = github_1.context.repo.repo;
         console.log('Context:');
-        console.log(github_1.default.context);
+        console.log(github_1.context);
     }
     static construct(options) {
         return __awaiter(this, void 0, void 0, function* () {

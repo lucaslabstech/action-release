@@ -1,4 +1,3 @@
-import { getOctokit } from '@actions/github';
 import { Logger } from './common/logger';
 import { ChangelogGenerator } from './core/changelog-generator';
 import { inputs } from './core/input';
