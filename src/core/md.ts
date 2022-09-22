@@ -1,5 +1,6 @@
 import { Commit, ConvComTitle } from '../common/common.types';
 import { InputIncludes } from './input';
+import { Logger } from '../common/logger';
 
 /** Generates a markdown changelog from a list of commits. */
 export function toMd(
@@ -22,7 +23,12 @@ export function toMd(
         }
     });
 
-    return `${title}${sections}${footer}`;
+    const md = `${title}${sections}${footer}`;
+
+    Logger.log('        md: Generated markdown changelog');
+    Logger.log(md);
+
+    return md;
 }
 
 export function sectionMd(title: string, commits: Commit[], includes: InputIncludes) {

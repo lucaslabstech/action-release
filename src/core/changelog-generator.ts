@@ -18,7 +18,6 @@ export class ChangelogGenerator {
         this.octokit = getOctokit(input.token);
         this.owner = context.repo.owner;
         this.repo = context.repo.repo;
-        Logger.debug(context.payload.repository?.asd);
     }
 
     static async construct(options: Input) {
@@ -48,14 +47,19 @@ export class ChangelogGenerator {
     }
 
     private setCommits() {
+        Logger.log('    cg: Setting commits');
         if (this.comparison?.commits) {
             this.commits = transformCommits(this.comparison);
             this.groupedCommits = groupCommitsByType(this.commits);
+
+            Logger.log(this.commits);
+            Logger.log(this.groupedCommits);
         }
     }
 
     /** get markdown changelog */
     public get md(): string {
+        Logger.log('    cg: Generating markdown changelog');
         if (!this.groupedCommits) return '';
         return toMd(
             this.groupedCommits,
