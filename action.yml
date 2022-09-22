@@ -31,8 +31,8 @@ inputs:
     required: false
     default: 'true'
 outputs:
-  changelogs:
-    description: 'Changelogs'
+  changelog:
+    description: 'Changelog'
 runs:
   using: 'node16'
   main: 'dist/index.js'

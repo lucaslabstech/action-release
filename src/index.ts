@@ -17,7 +17,7 @@ async function generateChangelog() {
     Logger.log('📝 Changelog generated');
     Logger.log(md);
 
-    setOutput('changelogs', md);
+    setOutput('changelog', md);
 
     Logger.log('Done');
 }

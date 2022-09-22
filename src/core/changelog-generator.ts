@@ -22,9 +22,6 @@ export class ChangelogGenerator {
     }
 
     static async construct(options: Input) {
-        Logger.info(`Creating changelog generator`);
-        console.log(options);
-
         const changelog = new ChangelogGenerator(options);
         await changelog.compareBaseHead();
         changelog.setCommits();
