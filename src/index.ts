@@ -3,8 +3,10 @@ import { Logger } from './common/logger';
 import { ChangelogGenerator } from './core/changelog-generator';
 import { inputs } from './core/input';
 
-const opts = inputs();
 Logger.log('🏁 Changelog generator started');
+
+const opts = inputs();
+
 Logger.log('Options: ');
 Logger.log(opts);
 

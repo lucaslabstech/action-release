@@ -9745,30 +9745,37 @@ exports.groupCommitsByType = groupCommitsByType;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.inputs = void 0;
 const core_1 = __nccwpck_require__(5681);
+const logger_1 = __nccwpck_require__(1235);
 function inputs() {
     var _a, _b, _c, _d;
-    const token = (0, core_1.getInput)('token', { required: true });
-    const from = (0, core_1.getInput)('from', { required: true });
-    const to = (0, core_1.getInput)('to', { required: true });
-    const nextVersion = (0, core_1.getInput)('next-version', { required: true });
-    const includeBody = ((_a = (0, core_1.getInput)('include-body', { required: false })) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === 'true';
-    const includeHash = ((_b = (0, core_1.getInput)('include-hash', { required: false })) === null || _b === void 0 ? void 0 : _b.toLowerCase()) === 'true';
-    const includeAuthor = ((_c = (0, core_1.getInput)('include-author', { required: false })) === null || _c === void 0 ? void 0 : _c.toLowerCase()) === 'true';
-    const includePr = ((_d = (0, core_1.getInput)('include-pr', { required: false })) === null || _d === void 0 ? void 0 : _d.toLowerCase()) === 'true';
-    return {
-        token,
-        opts: {
-            from,
-            to,
-            nextVersion,
-            include: {
-                body: includeBody,
-                hash: includeHash,
-                author: includeAuthor,
-                pr: includePr,
+    try {
+        const token = (0, core_1.getInput)('token', { required: true });
+        const from = (0, core_1.getInput)('from', { required: true });
+        const to = (0, core_1.getInput)('to', { required: true });
+        const nextVersion = (0, core_1.getInput)('next-version', { required: true });
+        const includeBody = ((_a = (0, core_1.getInput)('include-body', { required: false })) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === 'true';
+        const includeHash = ((_b = (0, core_1.getInput)('include-hash', { required: false })) === null || _b === void 0 ? void 0 : _b.toLowerCase()) === 'true';
+        const includeAuthor = ((_c = (0, core_1.getInput)('include-author', { required: false })) === null || _c === void 0 ? void 0 : _c.toLowerCase()) === 'true';
+        const includePr = ((_d = (0, core_1.getInput)('include-pr', { required: false })) === null || _d === void 0 ? void 0 : _d.toLowerCase()) === 'true';
+        return {
+            token,
+            opts: {
+                from,
+                to,
+                nextVersion,
+                include: {
+                    body: includeBody,
+                    hash: includeHash,
+                    author: includeAuthor,
+                    pr: includePr,
+                }
             }
-        }
-    };
+        };
+    }
+    catch (error) {
+        logger_1.Logger.err(error);
+        throw error;
+    }
 }
 exports.inputs = inputs;
 
@@ -9843,8 +9850,8 @@ const core_1 = __nccwpck_require__(5681);
 const logger_1 = __nccwpck_require__(1235);
 const changelog_generator_1 = __nccwpck_require__(709);
 const input_1 = __nccwpck_require__(2322);
-const opts = (0, input_1.inputs)();
 logger_1.Logger.log('🏁 Changelog generator started');
+const opts = (0, input_1.inputs)();
 logger_1.Logger.log('Options: ');
 logger_1.Logger.log(opts);
 generateChangelog();
