@@ -4,6 +4,7 @@
         "**/**/tsconfig*": true,
         ".npmrc": true,
         "**/**/*code-workspace": true,
+        "coco.yml": true,
         // ".github": true,
         // "**/**/package.json": true,
 

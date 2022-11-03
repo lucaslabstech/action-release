@@ -1,4 +1,4 @@
-name: Release
+name: "🔖 Release"
 on: [workflow_call, workflow_dispatch]
 
 concurrency:
@@ -15,24 +15,25 @@ jobs:
       version: ${{ steps.version.outputs.current-version }}
 
     steps:
-      - name: Checkout Repository
+      - name: 📁 Checkout Repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 16.3.0
 
-      - name: Get Release Version
+      - name: 🏷️ Get Release Version
         id: version
         uses: martinbeentjes/npm-get-version-action@main
 
-      - name: Get last git tag
+      - name: ⬅️ Get last git tag
         id: tag
-        run: echo "::set-output name=last-tag::$(git describe --tags --abbrev=0 || git rev-list --max-parents=0 ${{github.ref}})"
+        run: echo "last-tag=$(git describe --tags --abbrev=0 || git rev-list --max-parents=0 ${{github.ref}})" >> $GITHUB_OUTPUT
 
-      - name: Generate Changelog
+      - name: 📑 Generate Changelog
         uses: ./
         id: changelog
         with:
@@ -41,12 +42,12 @@ jobs:
           to: ${{ github.ref }}
           next-version: v${{ steps.version.outputs.current-version }}
 
-      - name: Delete outdated drafts
+      - name: 🗑️ Delete outdated drafts
         uses: hugo19941994/delete-draft-releases@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create Release Draft
+      - name: 🔖 Create Release Draft
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
